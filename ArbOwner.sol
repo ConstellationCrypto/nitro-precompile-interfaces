@@ -309,6 +309,12 @@ interface ArbOwner {
         uint64 gas
     ) external;
 
+    /// @notice ApeChain: set the share price (yield is permanently frozen)
+    function setSharePrice(uint64 sharePrice) external;
+
+    /// @notice ApeChain: set the APY (yield is permanently frozen)
+    function setApy(uint64 apy) external;
+
     /// Emitted when a successful call is made to this precompile
     event OwnerActs(bytes4 indexed method, address indexed owner, bytes data);
 }
