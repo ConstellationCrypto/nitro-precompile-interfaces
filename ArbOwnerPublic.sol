@@ -63,5 +63,14 @@ interface ArbOwnerPublic {
     /// @notice Available in ArbOS version 40 with default as false
     function isCalldataPriceIncreaseEnabled() external view returns (bool);
 
+    /// @notice ApeChain: get the frozen share price (yield is permanently disabled)
+    function getSharePrice() external view returns (uint64);
+
+    /// @notice ApeChain: get the total share count
+    function getShareCount() external view returns (uint256);
+
+    /// @notice ApeChain: get the APY (permanently zero)
+    function getApy() external view returns (uint64);
+
     event ChainOwnerRectified(address rectifiedOwner);
 }
